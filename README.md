@@ -7,7 +7,7 @@ Model
 - [x] create Entities + attributes
 - [ ] implement Entity associations
 - [ ] implement Data Access Layer 
-- [ ] test CRUD Operation
+- [ ] test CRUD Operations
 
 
 View
