@@ -1,2 +1,4 @@
-package model;public class Statistic {
+package model;
+
+public class Statistic {
 }

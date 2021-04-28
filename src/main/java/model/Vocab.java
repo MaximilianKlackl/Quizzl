@@ -1,2 +1,4 @@
-package model;public class Vocab {
+package model;
+
+public class Vocab {
 }

@@ -1,2 +1,4 @@
-package model;public class Card {
+package model;
+
+public class Card {
 }

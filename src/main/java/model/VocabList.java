@@ -1,2 +1,4 @@
-package model;public class VocabList {
+package model;
+
+public class VocabList {
 }

@@ -1,2 +1,4 @@
-package model;public class Flashcard {
+package model;
+
+public class Flashcard {
 }

@@ -1,2 +1,4 @@
-package model;public class FlashcardStaple {
+package model;
+
+public class FlashcardStaple {
 }
