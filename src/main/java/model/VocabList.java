@@ -1,4 +1,7 @@
 package model;
 
-public class VocabList {
+import javax.persistence.Entity;
+
+@Entity
+public class VocabList extends CardList {
 }

@@ -1,4 +1,9 @@
 package model;
 
-public class Flashcard {
+import javax.persistence.Entity;
+
+@Entity
+public class Flashcard extends Card{
+
+
 }
