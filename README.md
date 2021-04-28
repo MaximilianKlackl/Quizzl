@@ -10,4 +10,9 @@ Model
 - [ ] test CRUD Operation
 
 
+View
+- [ ] create views
+- [ ] make responsive
+- [ ] custom css styling 
+
 
