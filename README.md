@@ -45,9 +45,7 @@ Quizzl
 │   │       └── database.db
 │   └── test
 │       └── java
-├── target
 ├── Quizzzl.iml
-├── README.md
 └── pom.xml
 ```
 
