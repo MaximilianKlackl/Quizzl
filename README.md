@@ -8,6 +8,7 @@ Model
 - [x] refactor Entity inheritance
 - [x] implement Entity associations
 - [ ] implement Data Access Layer 
+- [ ] plan and implement Setters for associations
 - [ ] implement Service Layer 
 - [ ] test CRUD Operations
 
@@ -36,6 +37,8 @@ Quizzl
 │   │   │   ├── dao
 │   │   │   ├── model
 │   │   │   ├── service
+│   │   │   ├── util
+│   │   │   ├── error
 │   │   │   └── Main.java
 │   │   └── resources
 │   │       ├── META-INF

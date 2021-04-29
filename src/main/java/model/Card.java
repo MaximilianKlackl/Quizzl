@@ -19,7 +19,9 @@ public class Card extends BaseEntity{
     private String front;
     private String back;
 
-    @ManyToOne(cascade = {CascadeType.ALL})
+    @ManyToOne(
+            cascade = {CascadeType.ALL},
+            fetch = FetchType.LAZY)
     @JoinColumn(name = "statistic_id")
     private Statistic statistic;
 

@@ -1,29 +1,20 @@
+import dao.FlashcardDao;
 import model.Flashcard;
-import model.FlashcardStaple;
-
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
 
-        Flashcard flashcard1 = new Flashcard("test1", "test2");
-        Flashcard flashcard2 = new Flashcard("test1", "test2");
-
-        FlashcardStaple flashcardStaple = new FlashcardStaple();
-        flashcardStaple.setTopic("Nice");
-        List<Flashcard> flashcardList = new ArrayList<>();
-
-        flashcard1.setFlashcardList(flashcardStaple);
-        flashcard2.setFlashcardList(flashcardStaple);
+        Flashcard f1 = new Flashcard("Test1", "Test2");
+        Flashcard f2 = new Flashcard("Test2", "Test2");
 
         EntityManager em = Persistence.createEntityManagerFactory("persistence").createEntityManager();
+        FlashcardDao flashcardDao = new FlashcardDao(em);
+        flashcardDao.save(f1);
+        flashcardDao.save(f2);
 
-        em.getTransaction().begin();
-        //em.persist(flashcard1);
-        em.getTransaction().commit();
+        flashcardDao.getAll().forEach(flashcard -> System.out.println(flashcard.getId()));
     }
 }

@@ -18,13 +18,14 @@ public class Statistic extends BaseEntity{
 
     @OneToOne(
             mappedBy = "statistic",
-            cascade = CascadeType.ALL)
+            cascade = CascadeType.ALL,
+            fetch = FetchType.LAZY)
     private CardList cardList;
 
     @OneToMany(
             mappedBy = "statistic",
-            cascade = {CascadeType.ALL}
-    )
+            cascade = {CascadeType.ALL},
+            fetch = FetchType.LAZY)
     private List<Card> wrongCards;
 
     private int timeSpend; // in minutes

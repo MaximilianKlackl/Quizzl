@@ -5,10 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 @Setter
 @Getter
@@ -18,7 +15,9 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Flashcard extends Card{
 
-    @ManyToOne(cascade = {CascadeType.ALL})
+    @ManyToOne(
+            cascade = {CascadeType.ALL},
+            fetch = FetchType.LAZY)
     @JoinColumn(name = "cardlist_id")
     private FlashcardStaple flashcardList;
 

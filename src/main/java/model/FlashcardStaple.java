@@ -7,6 +7,7 @@ import lombok.ToString;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.OneToMany;
 import java.util.List;
 
@@ -22,7 +23,8 @@ public class FlashcardStaple extends CardList {
 
     @OneToMany(
             mappedBy = "flashcardList",
-            cascade = {CascadeType.ALL})
+            cascade = {CascadeType.ALL},
+            fetch = FetchType.LAZY)
     private List<Flashcard> flashcardList;
 
     public FlashcardStaple(String topic, String name, String description){

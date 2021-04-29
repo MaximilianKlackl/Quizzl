@@ -20,7 +20,8 @@ public class VocabList extends CardList {
 
     @OneToMany(
             mappedBy = "vocabList",
-            cascade = {CascadeType.ALL})
+            cascade = {CascadeType.ALL},
+            fetch = FetchType.LAZY)
     private List<Vocab> vocabList;
 
     public VocabList(String unit, String name, String description){

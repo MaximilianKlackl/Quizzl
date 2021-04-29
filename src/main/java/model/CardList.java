@@ -18,7 +18,9 @@ public class CardList extends BaseEntity{
     private String name;
     private String description;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(
+            cascade = CascadeType.ALL,
+            fetch = FetchType.LAZY)
     @JoinColumn(name = "statistic_id")
     private Statistic statistic;
 
