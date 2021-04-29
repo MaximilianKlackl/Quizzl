@@ -10,15 +10,11 @@ import java.util.List;
 
 @Getter
 @ToString
-@EqualsAndHashCode
+@EqualsAndHashCode(callSuper = false)
+@Setter
 
 @Entity
-public class Statistic {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "statistic_id")
-    private long id;
+public class Statistic extends BaseEntity{
 
     @OneToOne(
             mappedBy = "statistic",

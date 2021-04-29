@@ -8,18 +8,14 @@ import lombok.ToString;
 import javax.persistence.*;
 
 @Getter
-@EqualsAndHashCode
+@EqualsAndHashCode(callSuper = false)
 @ToString
 @Setter
 
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-public class Card {
+public class Card extends BaseEntity{
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "card_id")
-    private long id;
     private String front;
     private String back;
 

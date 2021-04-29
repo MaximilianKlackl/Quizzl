@@ -13,12 +13,8 @@ import javax.persistence.*;
 
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-public class CardList {
+public class CardList extends BaseEntity{
 
-    @Id
-    @Column(name = "cardList_id")
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
     private String name;
     private String description;
 
