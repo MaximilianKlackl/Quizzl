@@ -2,19 +2,36 @@ package model;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
-
+import lombok.Setter;
+import lombok.ToString;
 import javax.persistence.*;
 
 @Getter
-@EqualsAndHashCode
+@EqualsAndHashCode(callSuper = false)
+@ToString
+@Setter
 
-@MappedSuperclass
 @Entity
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 public class CardList {
 
     @Id
+    @Column(name = "cardList_id")
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
-    private String description;
+    private long id;
     private String name;
+    private String description;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "statistic_id")
+    private Statistic statistic;
+
+    public CardList(String name, String description){
+        this.name = name;
+        this.description = description;
+    }
+
+    public CardList() {
+
+    }
 }

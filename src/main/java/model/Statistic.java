@@ -1,16 +1,36 @@
 package model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
+import javax.persistence.*;
+import java.util.List;
+
+@Getter
+@ToString
+@EqualsAndHashCode
 
 @Entity
 public class Statistic {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
-    private double learnProgress;
-    private int timeSpend;
+    @Column(name = "statistic_id")
+    private long id;
+
+    @OneToOne(
+            mappedBy = "statistic",
+            cascade = CascadeType.ALL)
+    private CardList cardList;
+
+    @OneToMany(
+            mappedBy = "statistic",
+            cascade = {CascadeType.ALL}
+    )
+    private List<Card> wrongCards;
+
+    private int timeSpend; // in minutes
+    private float learnProgress; // in percent
 }
