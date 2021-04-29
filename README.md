@@ -24,6 +24,8 @@ View
 - Database Access via Dao Layer
 - Need of a Service Layer? 
 
+- Git Workflow?
+
 
 #### Folder Structure
 ```
