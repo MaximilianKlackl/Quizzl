@@ -26,7 +26,7 @@ View
 
 ### Folder Structure
 ```
-.
+Quizzl
 ├── src
 │   ├── main
 │   │   ├── java
