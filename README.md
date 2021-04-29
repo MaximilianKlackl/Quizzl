@@ -8,7 +8,12 @@ Model
 - [x] refactor Entity inheritance
 - [x] implement Entity associations
 - [ ] implement Data Access Layer 
-- [ ] test CRUD Operation
+- [ ] test CRUD Operations
 
+
+View
+- [ ] create views
+- [ ] make responsive
+- [ ] custom css styling 
 
 
