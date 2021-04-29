@@ -8,6 +8,7 @@ Model
 - [x] refactor Entity inheritance
 - [x] implement Entity associations
 - [ ] implement Data Access Layer 
+- [ ] implement Service Layer 
 - [ ] test CRUD Operations
 
 
