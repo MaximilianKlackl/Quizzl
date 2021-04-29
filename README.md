@@ -24,5 +24,30 @@ View
 - Need of a Service Layer? 
 
 
+### Folder Structure
+```
+.
+├── src
+│   ├── main
+│   │   ├── java
+│   │   │   ├── controller
+│   │   │   ├── dao
+│   │   │   ├── model
+│   │   │   ├── service
+│   │   │   └── Main.java
+│   │   └── resources
+│   │       ├── META-INF
+│   │       │   └── persistence.xml
+│   │       ├── css
+│   │       ├── images
+│   │       ├── view
+│   │       └── database.db
+│   └── test
+│       └── java
+├── target
+├── Quizzzl.iml
+├── README.md
+└── pom.xml
+```
 
 
