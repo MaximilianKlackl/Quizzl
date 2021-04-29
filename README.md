@@ -23,7 +23,6 @@ View
 - MVC - Model View Controller
 - Database Access via Dao Layer
 - Need of a Service Layer? 
-
 - Git Workflow?
 
 
