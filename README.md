@@ -18,14 +18,14 @@ View
 - [ ] custom css styling 
 
 
-### Architectural Questions:
+### Architectural Questions
 
 - MVC - Model View Controller
 - Database Access via Dao Layer
 - Need of a Service Layer? 
 
 
-### Folder Structure
+#### Folder Structure
 ```
 Quizzl
 ├── src
