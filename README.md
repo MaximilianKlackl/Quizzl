@@ -17,3 +17,12 @@ View
 - [ ] custom css styling 
 
 
+### Architectural Questions:
+
+- MVC - Model View Controller
+- Database Access via Dao Layer
+- Need of a Service Layer? 
+
+
+
+
